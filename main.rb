@@ -20,6 +20,7 @@ end
 post '/items' do 
   item = Item.new
   @item.name = params[:name]
+  @item.image = params[:image]
   @item.description = params[:description]
   @item.price = params[:price]
   @item.pricetype = params[:pricetype]
