@@ -1,0 +1,13 @@
+<%= @item['name'] %>
+<a href=""><img src="<%#= @item['images'].first.image%>"></a>
+<%= @item.price %>
+<%= @item.pricetype %>
+<%= @item.location %>
+<%= @item.description %>
+<form action="/items" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="id" value="<%= @item['id'] %>">
+    <button>Delete</button>
+</form>
+
+<a href="/items/<%= @item['id'] %>/edit">edit</a>

@@ -1,0 +1,8 @@
+<form action="/items/<%= @item['id']%>" method="post">
+ <input type="hidden" name="_method" value="put">
+ <label for="">name</label>
+ <input name="name" value="<%= @item['name'] %>" type="text">
+ <label for="">image</label>
+ <input type="text" name="image" id="" value="<%#=@item['images'].first.image%>">
+ <button>update</button>
+</form>

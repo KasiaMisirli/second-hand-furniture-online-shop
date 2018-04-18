@@ -1,5 +1,5 @@
 options = {
-    apadter: 'postgresql',
+    adapter: 'postgresql',
     database: 'secondhandfurniture'
 }
 
