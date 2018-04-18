@@ -13,6 +13,20 @@ get '/' do
   erb :index
 end
 
+get '/items/new' do 
+  erb :new
+end
+
+post '/items' do 
+  item = Item.new
+  @item.name = params[:name]
+  @item.description = params[:description]
+  @item.price = params[:price]
+  @item.pricetype = params[:pricetype]
+  @item.location = params[:location]
+  redirect to ('/')
+end
+
 
 
 
