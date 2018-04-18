@@ -1,1 +1,11 @@
-<h1>hello world</h1>
+<h1>Second Hand Furniture</h1>
+
+<a href="/items/new">Post new ad</a>
+
+<% @items.each do |item|%>
+<h1>
+
+<a href="/items/<%= item.id%>"><%= item.name %></h1></a>
+
+<a href=""><img src="<%= item.image_url%>"></a>
+<% end %>
