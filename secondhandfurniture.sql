@@ -17,7 +17,8 @@ CREATE TABLE users (
     id SERIAL4 PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    tel VARCHAR(100)
+    tel VARCHAR(100),
+    password_digest VARCHAR(400) NOT NULL
 );
 INSERT INTO users (name, email, tel) VALUES ('Kasia', 'kasia.misirli@gmail.com', 'tel');
 

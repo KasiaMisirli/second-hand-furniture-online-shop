@@ -4,8 +4,8 @@
 
 <% @items.each do |item|%>
 <h1>
-
-<a href="/items/<%= item.id%>"><%= item.name %></h1></a>
+    <a href="/items/<%= item.id%>"><%= item.name %></a>
+</h1>
 <a href=""><img src="<%= item.image%>"></a>
 <a href=""><img src="<%= item.price%>"></a>
 <a href=""><img src="<%= item.pricetype%>"></a>
