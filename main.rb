@@ -29,5 +29,3 @@ post '/items' do
 end
 
 
-binding.pry
-
