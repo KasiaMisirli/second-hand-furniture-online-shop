@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-    validates :name, length: { in: 6..50 }
+    validates :name, length: { in: 2..50 }
     validates :price, presence: true
     validates :pricetype, presence: true
     validates :location, presence: true

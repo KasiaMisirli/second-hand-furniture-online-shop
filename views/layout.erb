@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>second hand furniture</title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
 </head>
 <body>
+   <% if logged_in?%>
+logged in as <%= current_user.email %>
+    <form action='/session' method='post'>
+      <input type="hidden" name="_method" value="delete">
+      <button>logout</button>
+    </form>
+<% end %>
    <div><a href="/">HOME</a></div>
+ <div><a href="/login">login</a></div>
+ <div><a href="/signup">Sign up</a></div>
   <%= yield %>
 
 </body>

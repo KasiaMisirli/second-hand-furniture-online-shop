@@ -1,8 +1,13 @@
+<% @item.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+<% end %>
+
+
 <form action="/items" method="post">
-<label for="">Name:</label>
+<label for="">Item name:</label>
 <input name="name" type="text">
-<label for="">Image:</label>
-<input name="image" type="text">
+<!--<label for="">Image:</label>
+<input name="image" type="text">-->
 <label for="price">Price:</label>
 <input name="price"type="text">
 <label for="">Price type:</label>
