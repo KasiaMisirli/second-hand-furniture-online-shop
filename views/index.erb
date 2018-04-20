@@ -4,9 +4,11 @@
 
 <% @items.each do |item|%>
 <h1><a href="/items/<%= item.id %>"><%= item.name %></a></h1>
+<h3><a href="/items/<%= item.id %>"><%= item.images %></a></h3>
 <h3><a href="/items/<%= item.id %>"><%= item.price %></a></h3>
 <h3><a href="/items/<%= item.id %>"><%= item.pricetype %></a></h3>
 <h3><a href="/items/<%= item.id %>"><%= item.location %></a></h3>
 <h3><a href="/items/<%= item.id %>"><%= item.description %></a></h3>
 <h3><a href="/items/<%= item.id %>"><%= item.user.name %></a></h3>
+<h3><a href="mailto:/items/<%= item.id %>"><%= item.user.email %></a></h3>
 <% end %>

@@ -4,6 +4,7 @@
 <%= @item.pricetype %>
 <%= @item.location %>
 <%= @item.description %>
+<%= @item.user_id%>
 <form action="/items" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="hidden" name="id" value="<%= @item.id %>">

@@ -1,3 +1,6 @@
+<% @user && @user.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+<% end %>
 <h1>register</h1>
 <form action="/signupdetails" method="post">
     <label for="">Your name:</label>

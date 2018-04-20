@@ -1,4 +1,4 @@
-<% @item.errors.full_messages.each do |message| %>
+<% @item && @item.errors.full_messages.each do |message| %>
     <p><%= message %></p>
 <% end %>
 

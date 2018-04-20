@@ -15,12 +15,12 @@ helpers do
   end
 
   def logged_in?
-     if current_user
+    if current_user
       return true
-     else
+    else
       return false
+    end
   end
-end
 end
 
 
@@ -30,21 +30,23 @@ get '/' do
 end
 
 get '/items/new' do 
-    item = Item.new
   erb :new
 end
 
 post '/items' do 
-  item = Item.new
-  item.name = params[:name]
+  @item = Item.new
+  @item.name = params[:name]
   # @item.images.first.image = params[:image]
-  item.description = params[:description]
-  item.price = params[:price]
-  item.pricetype = params[:pricetype]
-  item.location = params[:location]
-  item.user_id = session[:user_id]
-  item.save
-  redirect to ('/')
+  @item.description = params[:description]
+  @item.price = params[:price]
+  @item.pricetype = params[:pricetype]
+  @item.location = params[:location]
+  @item.user_id = session[:user_id]
+  if @item.save
+    redirect to ('/')
+  else
+    erb :new
+  end
 end
 
 get '/items/:id' do
@@ -80,26 +82,25 @@ end
 
 get '/signup' do
     erb :signup
-  end
+end
 
 post '/signupdetails' do
-    user = User.new
-    user.name = params[:name]
-    user.tel = params[:tel]
-    user.email = params[:email]
-    user.password = params[:password]
-    if user.save
-    session[:user_id] = user.id 
-    redirect to ('/')
-    else 
-        @item.errors
+    @user = User.new
+    @user.name = params[:name]
+    @user.tel = params[:tel]
+    @user.email = params[:email]
+    @user.password = params[:password]
+    if @user.save
+        session[:user_id] = @user.id 
+        redirect to ('/')
+    else
         erb :signup
-end
+    end
 end
 
 get '/login' do
     erb :login
-  end
+end
   
 post '/session' do
     user = User.find_by(email: params[:email])
