@@ -1,19 +1,17 @@
 <form action="/items/<%= @item.id %>" method="post">
- <input type="hidden" name="_method" value="put">
- <label for="">name</label>
- <input name="name" value="<%= @item.name %>" type="text">
- <label for="">image</label>
- <!--<input name="image" id="" value="<%#=@item['images'].first.image%>">
-<label for="price">Price:</label>-->
-<input value="<%= @item.price %>" name="price" type="text">
-<label for="">Price type:</label>
-<input value="<%= @item.pricetype %>" name="pricetype" type="text">
-<label for="">Location:</label>
-<input value="<%= @item.location %>" name="location" type="text">
-<label for="">description</label>
-<input value="<%= @item.description %>" name="description" type="text">
-
-
- <button>update</button>
+  <input type="hidden" name="_method" value="put">
+  <label for="">name</label>
+  <input name="name" value="<%= @item.name %>" type="text">
+  <label for="">image</label>
+  <!--<input name="image" id="" value="<%#=@item['images'].first.image%>">
+  <label for="price">Price:</label>-->
+  <input value="<%= @item.price %>" name="price" type="text">
+  <label for="">Price type:</label>
+  <input value="<%= @item.pricetype %>" name="pricetype" type="text">
+  <label for="">Location:</label>
+  <input value="<%= @item.location %>" name="location" type="text">
+  <label for="">description</label>
+  <input value="<%= @item.description %>" name="description" type="text">
+  <button>update</button>
 </form>
 
