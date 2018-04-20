@@ -118,3 +118,7 @@ post '/session' do
     redirect to('/login')
   end 
 
+get '/search' do
+    @items = Item.where("name like ?", "%#{params[:query]}%")
+    erb :query
+end

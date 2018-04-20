@@ -6,6 +6,10 @@
   <link rel='stylesheet' href='/stylesheets/main.css'>
 </head>
 <body>
+<form action="/search" method="get">
+  <input type="text" name="query"/><br />   
+  <input type="submit" />
+</form>
    <% if logged_in?%>
 logged in as <%= current_user.email %>
     <form action='/session' method='post'>
