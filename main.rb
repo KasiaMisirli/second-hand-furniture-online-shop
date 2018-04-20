@@ -1,11 +1,18 @@
 require 'sinatra'
 require 'active_record'
+require 'cloudinary'
 require_relative 'db_config'
-# require 'sinatra/reloader'
+require 'sinatra/reloader'
 require 'pg'
 require_relative 'models/user'
 require_relative 'models/item'
 require_relative 'models/image'
+
+if Sinatra::Application.settings.development? 
+  require 'sinatra/reloader'
+  require 'pry'
+end
+
 
 enable :sessions
 
@@ -36,29 +43,30 @@ end
 post '/items' do 
     @item = Item.new
     @item.name = params[:name]
-    #   @image = Image.new
-    #   @image.image = params[:image]
     @item.description = params[:description]
     @item.price = params[:price]
     @item.pricetype = params[:pricetype]
     @item.location = params[:location]
     @item.user_id = session[:user_id]
-    # image = Image.new
-    # image.image = params[:image]
-    # image.save
     if @item.save
-        erb :images
+        redirect to("/items/#{@item.id}/images")
     else
         erb :new
     end
 end
+
+get '/items/:id/images' do
+  erb :images
+end
+
 post '/images' do
-    image = Image.new
-    image.image = params[:image]
-    if image.save
-        redirect to('/') 
-    end
+  image = Image.new
+  image.image = params[:image]
+  image.item_id = params[:item_id]
+  if image.save
+    redirect to('/')
   end
+end
 
 get '/items/:id' do
   @item = Item.find(params[:id])
@@ -133,4 +141,5 @@ get '/search' do
     @items = Item.where("name like ?", "%#{params[:query]}%")
     erb :query
 end
+
 
