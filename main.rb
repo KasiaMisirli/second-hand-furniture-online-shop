@@ -30,6 +30,7 @@ get '/' do
 end
 
 get '/items/new' do 
+    item = Item.new
   erb :new
 end
 
@@ -87,11 +88,14 @@ post '/signupdetails' do
     user.tel = params[:tel]
     user.email = params[:email]
     user.password = params[:password]
-    user.save
+    if user.save
     session[:user_id] = user.id 
     redirect to ('/')
+    else 
+        @item.errors
+        erb :signup
 end
-
+end
 
 get '/login' do
     erb :login
