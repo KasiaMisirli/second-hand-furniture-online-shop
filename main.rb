@@ -110,7 +110,7 @@ post '/session' do
       redirect to ('/')
     else
       erb :login
-  end
+    end
   end
   
   delete '/session' do

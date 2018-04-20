@@ -7,3 +7,6 @@
 <h5>Price type: <%= item.pricetype %></h5>
 <h5>Location: <%= item.location %></h5>
 <% end %>
+<% if current_user.id == true %>
+<h3><a href="mailto:/items/<%= item.id %>"><%= item.user.email %></a></h3>
+<% end %>

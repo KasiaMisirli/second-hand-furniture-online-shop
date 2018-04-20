@@ -8,7 +8,7 @@
 <body>
 <form action="/search" method="get">
   <input type="text" name="query"/><br />   
-  <input type="submit" />
+  <button type="submit">Search</button>
 </form>
    <% if logged_in?%>
 logged in as <%= current_user.email %>

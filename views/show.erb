@@ -1,10 +1,10 @@
-<%= @item.name %>
+<h5><%= @item.name %></h5>
 <!--<a href=""><img src="<%#= @item['images'].first.image%>"></a>-->
-<%= @item.price %>
-<%= @item.pricetype %>
-<%= @item.location %>
-<%= @item.description %>
-<%= @item.user_id%>
+<h5><%= @item.price %></h5>
+<h5><%= @item.pricetype %></h5>
+<h5><%= @item.location %></h5>
+<h5><%= @item.description %></h5>
+<h5><%= @item.user_id%></h5>
 <form action="/items" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="hidden" name="id" value="<%= @item.id %>">
