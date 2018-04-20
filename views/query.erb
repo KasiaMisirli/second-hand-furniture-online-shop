@@ -2,7 +2,7 @@
 
 <h1><a href="/items/<%= item.id %>"><%= item.name %></a></h1>
 <h5>Description: <%= item.description %></h5>
-<h5>Seller: <%= item.user.name %></h5>
+<h5><a href="/users/<%= user.id %>">Seller: <%= item.user.name %></h5>
 <h5>Price: <%= item.price %></h5>
 <h5>Price type: <%= item.pricetype %></h5>
 <h5>Location: <%= item.location %></h5>

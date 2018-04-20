@@ -2,19 +2,20 @@
     <p><%= message %></p>
 <% end %>
 
-
 <form action="/items" method="post">
-<label for="">Item name:</label>
-<input name="name" type="text">
-<!--<label for="">Image:</label>
-<input name="image" type="text">-->
-<label for="price">Price:</label>
-<input name="price"type="text">
-<label for="">Price type:</label>
-<input name="pricetype"type="text">
-<label for="">Location:</label>
-<input name="location"type="text">
-<label for="">description</label>
-<input name="description" type="text">
-<button >Post your ad!</button>
+    <div><label for="">Item name:</label>
+    <input name="name" type="text"></div>
+    <div><label for="price">Price:</label>
+    <input name="price"type="text"></div>
+    <div><label for="">Price type:</label>
+    <input name="pricetype"type="text"></div>
+    <div><label for="">Location:</label>
+    <input name="location"type="text"></div>
+    <div><label for="">description</label>
+    <input name="description" type="text"></div>
 </form>
+<form action="/items" method="post" enctype="multipart/form-data">
+  <input type="file" name="image" />
+  <button>upload</button>
+</form>
+<button >Post your ad!</button>

@@ -34,20 +34,31 @@ get '/items/new' do
 end
 
 post '/items' do 
-  @item = Item.new
-  @item.name = params[:name]
-  # @item.images.first.image = params[:image]
-  @item.description = params[:description]
-  @item.price = params[:price]
-  @item.pricetype = params[:pricetype]
-  @item.location = params[:location]
-  @item.user_id = session[:user_id]
-  if @item.save
-    redirect to ('/')
-  else
-    erb :new
-  end
+    @item = Item.new
+    @item.name = params[:name]
+    #   @image = Image.new
+    #   @image.image = params[:image]
+    @item.description = params[:description]
+    @item.price = params[:price]
+    @item.pricetype = params[:pricetype]
+    @item.location = params[:location]
+    @item.user_id = session[:user_id]
+    # image = Image.new
+    # image.image = params[:image]
+    # image.save
+    if @item.save
+        erb :images
+    else
+        erb :new
+    end
 end
+post '/images' do
+    image = Image.new
+    image.image = params[:image]
+    if image.save
+        redirect to('/') 
+    end
+  end
 
 get '/items/:id' do
   @item = Item.find(params[:id])
@@ -71,7 +82,7 @@ end
 put '/items/:id' do
   @item = Item.find(params[:id])
   @item.name = params[:name]
-  # @item.images.first.image = params[:image]
+#   @item.images.first.image = params[:image]
   @item.description = params[:description]
   @item.price = params[:price]
   @item.pricetype = params[:pricetype]
@@ -122,3 +133,4 @@ get '/search' do
     @items = Item.where("name like ?", "%#{params[:query]}%")
     erb :query
 end
+
