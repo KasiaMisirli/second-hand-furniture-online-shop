@@ -71,7 +71,6 @@ end
 get '/items/:id' do
   @item = Item.find(params[:id])
   @image = Image.find(params[:item_id])
-	
   erb :show
 end
   
