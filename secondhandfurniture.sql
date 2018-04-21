@@ -22,7 +22,7 @@ CREATE TABLE users (
 );
 INSERT INTO users (name, email, tel) VALUES ('Kasia', 'kasia.misirli@gmail.com', 'tel');
 ALTER TABLE users RENAME COLUMN password TO password_digest; 
-
+ALTER TABLE users ADD COLUMN password_digest VARCHAR;
 
 CREATE TABLE images (
     id SERIAL4 PRIMARY KEY,

@@ -6,6 +6,7 @@ require 'pg'
 require_relative 'models/user'
 require_relative 'models/item'
 require_relative 'models/image'
+require 'bcrypt'
 
 if Sinatra::Application.settings.development? 
   require 'sinatra/reloader'
