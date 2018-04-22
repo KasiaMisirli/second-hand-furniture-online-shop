@@ -1,14 +1,18 @@
 <% @items.each do |item| %>
-<div class="query-post">
-<h1><a href="/items/<%= item.id %>"><%= item.name %></a></h1>
-<a href="/items/<%= item.id %>"><img src='<%= item.images %>' /></a>
-<h5>Description: <%= item.description %></h5>
-<h5><a href="/users/<%= item.id %>">Seller: <%= item.user.name %></h5>
-<h5>Price: <%= item.price %></h5>
-<h5>Price type: <%= item.pricetype %></h5>
-<h5>Location: <%= item.location %></h5>
-</div>
-<% end %>
-<% if current_user.id == true %>
-<h3><a href="mailto:/items/<%= item.id %>"><%= item.user.email %></a></h3>
+    <div class="query-post">
+        <h1>
+            <a href="/items/<%= item.id %>"><%= item.name %></a>
+        </h1>
+        <a href="/items/<%= item.id %>"><img src='<%= item.images %>' /></a>
+        <h5>Description: <%= item.description %></h5>
+        <h5>
+            <a href="/users/<%= item.id %>">Seller: <%= item.user.name %>
+        </h5>
+        <h5>Price: <%= item.price %></h5>
+        <h5>Price type: <%= item.pricetype %></h5>
+        <h5>Location: <%= item.location %></h5>
+    </div>
+    <% end %>
+    <% if current_user.id == true %>
+    <h3><a href="mailto:/items/<%= item.id %>"><%= item.user.email %></a></h3>
 <% end %>

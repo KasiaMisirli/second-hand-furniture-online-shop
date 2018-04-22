@@ -78,12 +78,12 @@ end
 delete '/items' do
   @item = Item.find(params[:id])
   @item.delete(params[:id])
-   redirect to ('/')
+  redirect to ('/')
 end
 
 get '/items/:id/edit' do
     @item = Item.find(params[:id])
-    @image = Item.find(params[:item_id])
+    # @image = Item.find(params[:item_id])
     if @item.user_id == current_user.id
     @item.save
     erb :edit

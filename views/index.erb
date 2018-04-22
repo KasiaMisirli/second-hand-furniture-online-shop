@@ -1,16 +1,17 @@
 
-
 <% @items.each do |item|%>
-<div class="index-post">
-<h1><a href="/items/<%= item.id %>"> <%= item.name %></a></h1>
-<!--<h3><a href="/items/<%#= item.id %>"><%= item.images %></a></h3>-->
-<h3>Price: <%= item.price %></h3>
-<h3>Price type: <%= item.pricetype %></h3>
-<h3>Location: <%= item.location %></h3>
-<h3>Description: <%= item.description %></h3>
-<h3>Seller:<%= item.user.name %></h3>
-<% if session[:user_id] %>
-<h3><a href="mailto:/items/<%= item.id %>"><%= item.user.email %></a></h3>
-<% end %>
-</div>
+    <div class="index-post">
+        <h1>
+            <a d="blue"href="/items/<%= item.id %>"> <%= item.name %></a>
+        </h1>
+        <!--<h3><a href="/items/<%#= item.id %>"><%= item.images %></a></h3>-->
+        <h3>Price: <%= item.price %></h3>
+        <h3>Price type: <%= item.pricetype %></h3>
+        <h3>Location: <%= item.location %></h3>
+        <h3>Description: <%= item.description %></h3>
+        <h3>Seller: <%= item.user.name %></h3>
+        <% if session[:user_id] %>
+        <h3><a id="blue"href="mailto:/items/<%= item.id %>"><%= item.user.email %></a></h3>
+        <% end %>
+    </div>
 <% end %>

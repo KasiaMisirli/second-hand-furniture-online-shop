@@ -1,17 +1,25 @@
 <% @user && @user.errors.full_messages.each do |message| %>
-    <p><%= message %></p>
+<p><%= message %></p>
 <% end %>
-<h1>register</h1>
-<form action="/signupdetails" method="post">
-    <div><label for="">Your name:</label>
-    <input name="name" type="text"></div>
-    <div><label for="">Your mobile:</label>
-    <input type="text" name="tel" id=""></div>
-    <div><label for="">Your email:</label>
-    <input name="email" type="text"></div>
-    <div><label for="">Password: </label>
-    <input name="password" type="password"></div>
-    <button>Register</button>
-    <h5>Do you have an accout?</h5>
+<h1>Sign up</h1>
+<form class="signupform"action="/signupdetails" method="post">
+    <div>
+        <label for="">Name: </label>
+        <input class="signupbox"name="name" type="text">
+    </div>
+    <div>
+        <label for="">Mobile: </label>
+        <input class="signupbox"type="text" name="tel" id="">
+    </div>
+    <div>
+        <label for="">Email: </label>
+        <input class="signupbox"name="email" type="text">
+    </div>
+    <div>
+        <label for="">Password: </label>
+        <input class="signupbox"name="password" type="password">
+    </div>
+    <button class="but">Sign up</button>
+    <h5>Do you have an account?</h5>
     <a href="/login">Login</a>
  </form>

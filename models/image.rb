@@ -21,7 +21,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 end
 
 class Image < ActiveRecord::Base
-    # mount_uploader :image, ImageUploader
+    mount_uploader :image, ImageUploader
     validates :image, presence: true
     belongs_to :user
     belongs_to :item

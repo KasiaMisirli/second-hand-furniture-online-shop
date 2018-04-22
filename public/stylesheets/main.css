@@ -1,53 +1,145 @@
+*{
+    box-sizing: border-box;
+}
 image {
     width: 100px; 
     height: auto;
 }
 body {
-    background-color: mistyrose;
+    background-color: rgb(244, 239, 239);
     text-align: center;
+    font-family: 'Nunito', sans-serif;
 }
-.index-post {
-    font-family: Georgia;
-    border: 1px solid black;
+.index-post { 
+    border: 1px solid #95B8D2;
     border-radius: 5px;
     text-decoration-line: none;
-    background-color: rgb(252, 249, 249);
-    margin:10px;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #0759A3
 }
-.query-post{
-    font-family: Georgia;
-    border: 1px solid black;
+.query-post {
+    border: 1px solid #95B8D2;
     border-radius: 5px;
     text-decoration-line: none;
-    background-color: rgb(252, 249, 249);
+    background-color: white;
     margin:10px;
+    text-decoration: none;
 }
-.show-post{
-    font-family: Georgia;
-    border: 1px solid black;
+.show-post {
+    border: 1px solid #95B8D2;
     border-radius: 5px;
     text-decoration-line: none;
-    background-color: rgb(252, 249, 249);
+    background-color: white;
     margin:10px;
+    text-decoration: none;
+    color: #0759A3
 }
-.post{
-    font-family: Georgia;
-    border: 1px solid black;
+.post {
+    border: 1px solid #95B8D2;
     border-radius: 5px;
     text-decoration-line: none;
     text-align: center;
-    background-color: rgb(252, 249, 249);
-    margin:10px;
-    /* padding-right: 450px;
-    margin-top: 100px; */
-    /* margin: 200px 50px 200px 50px; */
-
+    background-color: white;
+    margin: 5px;
+    text-decoration: none;
 }
-/* .top{
+.nav {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0759A3;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-decoration-line: none;
+}
+li {
+    float: left;
+}
+.topnav {
+    padding: 10px;
+    color: #FFDF08;
+}
+.email {
+    text-align: right;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: initial; */
+}
+.bar {
+    height: 50px;
+    width: 100%;
+    background-color: lightcyan;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+.search-bar{
     display: flex;
     flex-direction: row;
     justify-content: initial;
-} */
-/* .search-bar{
+    font-family: 'Nunito', sans-serif; 
+}
+.button {
+    width: 200px;
+    border-radius: 0 10px 10px 0;
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+.signupbox{
+    height: 40px;
+    width: 150px;
+    padding-right: 30%;
+    text-align: right;
+    border-radius: 5px;
+}
+.nav a {
+    color: #FFDF08;
+}
+.loginbox{
+    height: 40px;
+    width: 150px;
+    padding-right: 30%;
+    text-align: right;
+    border-radius: 5px;
+}
+.but{
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.inputbox{
+    height: 40px;
+    width: 150px;
+    padding-right: 30%;
+    text-align: right;
+    border-radius: 5px;
+}
+.newitem{
+    margin-top: 20px;
+}
+.edit-form {
+    text-align: center;
+    margin-top: 15px;
+}
+.sec{
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+}
+#blue {
+    color: #0759A3
+}
+.img {
+    height: 120px;
     text-align: left;
-} */
+}

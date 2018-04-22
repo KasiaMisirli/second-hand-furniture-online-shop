@@ -4,27 +4,30 @@
   <meta charset="UTF-8">
   <title>second hand furniture</title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
 <body>
-<form action="/search" method="get">
-  <input type="text" name="query"/><br />   
-  <button type="submit">Search by item</button>
-</form>
-<div class="top">
-   <% if logged_in?%>
-logged in as <%= current_user.email %>
-    <form action='/session' method='post'>
-      <input type="hidden" name="_method" value="delete">
-      <button>logout</button>
+    <img class="img" src="images/logo2.png" alt="">
+    <div class="email">
+      <% if logged_in?%>
+      logged in as <%= current_user.email %>
+      <form class="logged" action='/session' method='post'>
+          <p><input type="hidden" name="_method" value="delete"></p>
+          <button class="logout">LOGOUT</button>
+      </form>
+    <% end %>
+    </div>
+    <ul class="nav">
+    <li id="yellow" class="topnav"><a href="/">HOME</a></li>
+    <li class="topnav"><a href="/login">LOGIN</a></li>
+    <li class="topnav"><a href="/signup">SIGN UP</a></li>
+    <li class="topnav"><a href="/items/new">POST AD</a></li>
+    <li></li>
+    </ul>
+    <form class="search-bar" action="/search" method="get">
+        <input class="bar" type="text" name="query" placeholder="SEARCH BY ITEM"/><br />   
+        <button class="button" type="submit">SEARCH</button>
     </form>
-<% end %>
-
-   <div><a href="/">HOME</a></div>
- <div><a href="/login">login</a></div>
- <div><a href="/signup">Sign up</a></div>
-<a href="/items/new">Post new ad</a>
-</div>
-  <%= yield %>
-
+    <%= yield %>
 </body>
 </html>
