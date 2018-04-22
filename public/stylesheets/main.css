@@ -96,20 +96,20 @@ a {
     font-family: 'Nunito', sans-serif;
 }
 .signupbox{
-    height: 40px;
+    /* height: 40px; */
     width: 150px;
-    padding-right: 30%;
-    text-align: right;
+    /* padding-right: 30%; */
+    /* text-align: right; */
     border-radius: 5px;
 }
 .nav a {
     color: #FFDF08;
 }
 .loginbox{
-    height: 40px;
+    /* height: 40px; */
     width: 150px;
-    padding-right: 30%;
-    text-align: right;
+    /* padding-right: 30%;
+    text-align: right; */
     border-radius: 5px;
 }
 .but{
@@ -118,10 +118,10 @@ a {
     margin-top: 10px;
 }
 .inputbox{
-    height: 40px;
+    /* height: 40px; */
     width: 150px;
-    padding-right: 30%;
-    text-align: right;
+    /* padding-right: 30%;
+    text-align: right; */
     border-radius: 5px;
 }
 .newitem{
