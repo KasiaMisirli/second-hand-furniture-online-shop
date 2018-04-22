@@ -9,7 +9,8 @@ CREATE TABLE items (
     description VARCHAR(400),
     price VARCHAR(100),
     pricetype VARCHAR(100),
-    location VARCHAR(400)
+    location VARCHAR(400),
+    
 );
 INSERT INTO items (name, user_id, description, price, pricetype, location) VALUES ('Kasia', 1 , 'I want to sell my table' , '$10',  'non-negotiable','Reservoir');
 
@@ -22,7 +23,7 @@ CREATE TABLE users (
 );
 INSERT INTO users (name, email, tel) VALUES ('Kasia', 'kasia.misirli@gmail.com', 'tel');
 ALTER TABLE users RENAME COLUMN password TO password_digest; 
-ALTER TABLE users ADD COLUMN password_digest VARCHAR;
+ALTER TABLE items ADD COLUMN image_url VARCHAR;
 
 CREATE TABLE images (
     id SERIAL4 PRIMARY KEY,

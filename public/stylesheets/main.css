@@ -6,3 +6,48 @@ body {
     background-color: mistyrose;
     text-align: center;
 }
+.index-post {
+    font-family: Georgia;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration-line: none;
+    background-color: rgb(252, 249, 249);
+    margin:10px;
+}
+.query-post{
+    font-family: Georgia;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration-line: none;
+    background-color: rgb(252, 249, 249);
+    margin:10px;
+}
+.show-post{
+    font-family: Georgia;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration-line: none;
+    background-color: rgb(252, 249, 249);
+    margin:10px;
+}
+.post{
+    font-family: Georgia;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration-line: none;
+    text-align: center;
+    background-color: rgb(252, 249, 249);
+    margin:10px;
+    /* padding-right: 450px;
+    margin-top: 100px; */
+    /* margin: 200px 50px 200px 50px; */
+
+}
+/* .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+} */
+/* .search-bar{
+    text-align: left;
+} */

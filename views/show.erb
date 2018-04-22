@@ -1,10 +1,11 @@
-<h5><%= @item.name %></h5>
-<img src='<%= @image.item_id.image %>' />
-<h5><%= @item.price %></h5>
-<h5><%= @item.pricetype %></h5>
-<h5><%= @item.location %></h5>
-<h5><%= @item.description %></h5>
-<h5><%= @item.user_id%></h5>
+<div class="show-post">
+<h5>Item name:<%= @item.name %></h5>
+<img src='<%= @item.images.first %>' />
+<h5>Price:<%= @item.price %></h5>
+<h5>Price type:<%= @item.pricetype %></h5>
+<h5>Location: <%= @item.location %></h5>
+<h5>Description:<%= @item.description %></h5>
+<h5><% @item.user_id%></h5>
 <form action="/items" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="hidden" name="id" value="<%= @item.id %>">
@@ -15,3 +16,4 @@
 <%if @item.user_id == current_user.id%>
 <a href="/items/<%= @item.id %>/edit">edit</a>
 <%end%>
+</div>

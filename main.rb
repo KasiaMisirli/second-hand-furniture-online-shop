@@ -60,17 +60,18 @@ get '/items/:id/images' do
 end
 
 post '/images' do
-  image = Image.new
-  image.image = params[:image]
-  image.item_id = params[:item_id]
-  if image.save
+  @image = Image.new
+  @image.image = params[:filename]
+  @image.item_id = params[:item_id]
+  
+  if @image.save
     redirect to('/')
   end
 end
 
 get '/items/:id' do
   @item = Item.find(params[:id])
-  @image = Image.find(params[:item_id])
+  @image = Image.find_by(item_id: params[:id])
   erb :show
 end
   
@@ -82,6 +83,7 @@ end
 
 get '/items/:id/edit' do
     @item = Item.find(params[:id])
+    @image = Item.find(params[:item_id])
     if @item.user_id == current_user.id
     @item.save
     erb :edit
@@ -91,7 +93,7 @@ end
 put '/items/:id' do
   @item = Item.find(params[:id])
   @item.name = params[:name]
-#   @item.images.first.image = params[:image]
+  @image.image = params[:image]
   @item.description = params[:description]
   @item.price = params[:price]
   @item.pricetype = params[:pricetype]

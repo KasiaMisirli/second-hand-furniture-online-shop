@@ -1,7 +1,7 @@
 <% @item && @item.errors.full_messages.each do |message| %>
     <p><%= message %></p>
 <% end %>
-
+<div class="post">
 <form action="/items" method="post">
     <div><label for="">Item name:</label>
     <input name="name" type="text"></div>
@@ -15,3 +15,4 @@
     <input name="description" type="text"></div>
     <button >Save details</button>
 </form>
+</div>

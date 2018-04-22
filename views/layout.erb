@@ -8,8 +8,9 @@
 <body>
 <form action="/search" method="get">
   <input type="text" name="query"/><br />   
-  <button type="submit">Search</button>
+  <button type="submit">Search by item</button>
 </form>
+<div class="top">
    <% if logged_in?%>
 logged in as <%= current_user.email %>
     <form action='/session' method='post'>
@@ -17,9 +18,12 @@ logged in as <%= current_user.email %>
       <button>logout</button>
     </form>
 <% end %>
+
    <div><a href="/">HOME</a></div>
  <div><a href="/login">login</a></div>
  <div><a href="/signup">Sign up</a></div>
+<a href="/items/new">Post new ad</a>
+</div>
   <%= yield %>
 
 </body>
