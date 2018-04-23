@@ -10,6 +10,6 @@ IKEA's2 is a online shop for second hand IKEA furinture. You can post your ads a
 
 ## Tools used
 
-IKEA's2 is a Ruby application. I have also used Sinatra framework, Active Record, Cloudinary, CSS and HTML to build it.
+IKEA's2 is a Ruby application. I have also used Sinatra framework, Active Record, Cloudinary, Carrierwave, CSS and HTML to build it.
 The web app was launched on Heroku and is live for users to enjoy!
 
